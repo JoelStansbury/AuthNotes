@@ -7,7 +7,7 @@ Instructions for setting up CLI authentication with github
 
 2. Register SSH key here https://github.com/settings/keys
    * Click `New SSH key`
-   * Paste the entire contents of your public key `ssh_rsa.pub` into the key field (the file location was printed out in the previous step)
+   * Paste the entire contents of your (public key) `ssh_rsa.pub` into the key field (the file location was printed out in the previous step)
 
 ### Still not working
 * It may be due to the way your local repo is configured.
