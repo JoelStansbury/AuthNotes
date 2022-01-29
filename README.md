@@ -2,8 +2,14 @@
 Instructions for setting up CLI authentication with github
 /
 
+#### Info
+These are instructions for configuring github to trust a single computer to make operations on your personal repositories without the need to enter your credentials (username and private-access-token) manually.
+> Note: The process authenticates a single machine, but you can repeat it for multiple machines.
+
+The process involves creating an _ssh-key pair_ which your git command line interface (CLI) uses to authenticate an operation (e.g. `git push`). GitHub will encrypt some message with your public ssh-key which can only be decrypted by the private key stored on your machine (read more about asymmetric encryption [here](https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process)). Your machine will decrypt the message and send it back to GitHub to confirm your identity.
+
 ## Instructions
-1. Create SSH key `ssh-keygen` <br> ![image](https://user-images.githubusercontent.com/48299585/151645620-608fd9e6-b4c0-41ed-979c-4fc0d0fee812.png)
+1. Create SSH key `ssh-keygen` (this command is the same on windows osx and linux) <br> ![image](https://user-images.githubusercontent.com/48299585/151645620-608fd9e6-b4c0-41ed-979c-4fc0d0fee812.png)
 
 2. Register SSH key here https://github.com/settings/keys
    * Click `New SSH key`
