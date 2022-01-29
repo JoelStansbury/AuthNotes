@@ -17,7 +17,7 @@ Instructions for setting up CLI authentication with github
    * To avoid this in the future, when cloning a repository make sure to choose the `ssh` url ![image](https://user-images.githubusercontent.com/48299585/151645529-262c1ca5-4ef4-4f99-a64f-e2d7fc1e4c81.png)
 
 ### Updates
-(1/28/2021)
+(1/28/2022)
 ```bash
 remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
