@@ -1,5 +1,8 @@
 # Conda Build
 
+__Disclaimer__ - I'm still trying to figure this out
+
+
 ## Cookiecutter
 Building a conda package requires a specific directory structure. I don't know all of the specifics so I'm just going to share what worked for me.
 
