@@ -77,7 +77,7 @@ This seems to be a _"it might work if you're lucky"_ option.
 My understanding here is that setup.py searches on pip, 
 so this will fail for packages which are named differently on conda 
 (e.g. `opencv` on conda, vs `opencv-python` on pip) and for packages which are 
-hosted on pypi but no one has spent the time to build and upload a conda package.
+hosted on pypi but not conda-forge.
 ```yaml
     # dependencies are defined in setup.py
     # {% for dep in data['install_requires'] %}
