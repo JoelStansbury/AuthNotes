@@ -119,5 +119,6 @@ You would think that this would be possible wouldn't you. I mean, you're literal
 There is a potential workaround involving a local conda channel, but it doesn't seem to work for me, so your mileage may vary.
 https://github.com/conda/conda/issues/1884
 
-> Note: The problem is with grabing dependencies, so if your package doesn't use any external libraries you can test it.
+> Note: The problem is with grabing dependencies, so if your package doesn't use any external libraries you can test it with <br>
+> `conda install package_name-version-py....tar.bz2`
 
