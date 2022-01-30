@@ -114,6 +114,7 @@ about:
   * OUTPUT_PATH: Where you want conda to dump everything (including the `.tar.bz2` file we're working for)
 
 ## Testing the package (sanity check)
+> Note: I'm still working this part out. The windows section almost works, but it seems to ignore the requirement constraints in `meta.yaml`. I know it is not a problem with the `meta.yaml` during the test (automatically run at the end of the `conda build` command, you can see all of the package versions and they are correct)
 ### Windows
 I think this is probably not how it is supposed to work (you'll see why in the linux section) but this is what works for me.
 
