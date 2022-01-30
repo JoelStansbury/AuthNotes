@@ -120,5 +120,6 @@ There is a potential workaround involving a local conda channel, but it doesn't 
 https://github.com/conda/conda/issues/1884
 
 > Note: The problem is with grabing dependencies, so if your package doesn't use any external libraries you can test it with <br>
-> `conda install package_name-version-py....tar.bz2`
+> `conda install package_name-version-py....tar.bz2` <br>
+> By external, I mean: not installed in the conda environment you are doing the manual testing
 
