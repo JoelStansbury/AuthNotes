@@ -114,38 +114,10 @@ about:
   * OUTPUT_PATH: Where you want conda to dump everything (including the `.tar.bz2` file we're working for)
 
 ## Testing the package (sanity check)
-> Note: I'm still working this part out. The windows section almost works, but it seems to ignore the requirement constraints in `meta.yaml`. I know it is not a problem with the `meta.yaml` during the test (automatically run at the end of the `conda build` command, you can see all of the package versions and they are correct)
-### Windows
-I think this is probably not how it is supposed to work (you'll see why in the linux section) but this is what works for me.
+You would think that this would be possible wouldn't you. I mean, you're essentially making a set of instructions for how to build your project from scratch. Alas, this functionality actually is not supported for some reason. Aparantly you are not allowed to test your packages before submitting to conda-forge for review.
 
-_from the same dir you ran `conda build`_
+There is a potential workaround involving a local conda channel, but it doesn't seem to work for me, so your mileage may vary.
+https://github.com/conda/conda/issues/1884
 
-1. Open a new terminal with conda (Not sure why but if you do the next few steps in the same terminal you ran `conda build` then conda will not be able to pull any dependencies your package needs)
-2. Create an empty test environment (with python)
-    `conda create -n test python`
-    `conda activate test`
-3. Install your package: _starting from the same dir you ran `conda build`_
-  ```
-  cd build/noarch
-  conda install --use-local FULL_TAR_FILENAME
-  conda install --use-local PACKAGE -c conda-forge
-  ```
-
-Again, not sure why the two separate installs are necessary (and I cannot find any other reference saying this is how to do it), this is just what I need to do on my machine.
-
-  * If you just run `conda install --use-local PACKAGE -c conda-forge` then conda will look for your package on conda-forge and say it couldn't find it
-  * On the contrary, if you just run `conda install --use-local FULL_TAR_FILENAME` then the package doesn't get installed.
-  * However, if your package doesn't need anything from conda-forge I think you can just use `conda install --use-local PACKAGE`
-
-### Ubuntu
-I think this should work, but I still need to test it again to make sure.
-
-> Note: As I write this I'm remembering some issues I had (and couldn't solve) on my linux system, and am starting to think maybe it could be solved with new terminal workaround I needed in windows.
-
-```
-conda create - test python
-conda activate test
-cd build/noarch
-conda install --use-local PACKAGE -c conda-forge
-```
+> Note: The problem is with grabing dependencies, so if your package doesn't use any external libraries you can test it.
 
