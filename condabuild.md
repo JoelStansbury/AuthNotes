@@ -123,3 +123,5 @@ https://github.com/conda/conda/issues/1884
 > `conda install package_name-version-py....tar.bz2` <br>
 > By external, I mean: not installed in the conda environment you are doing the manual testing
 
+Regardless, the part that you would want to test (assuming you are new to conda build since you are reading this) is whether or not your meta.yaml instructions actually install the stuff your package needs. As far as I can tell, testing this is not supported. And judging by this comment https://github.com/conda/conda/issues/1884#issuecomment-181093847, I would not hold your breath for a fix.
+
