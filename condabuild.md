@@ -113,7 +113,7 @@ about:
   * PACKAGE: is whatever name you gave your package in the cookiecutter config
   * OUTPUT_PATH: Where you want conda to dump everything (including the `.tar.bz2` file we're working for)
 
-## Testing the package (sanity check)
+## Installing the package
 You would think that this would be possible wouldn't you. I mean, you're literally making a set of instructions for how to build your project from scratch. Alas, this functionality actually is not supported for some reason.
 
 There is a potential workaround involving a local conda channel, but it doesn't seem to work for me, so your mileage may vary.
