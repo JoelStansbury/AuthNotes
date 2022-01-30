@@ -114,7 +114,7 @@ about:
   * OUTPUT_PATH: Where you want conda to dump everything (including the `.tar.bz2` file we're working for)
 
 ## Testing the package (sanity check)
-You would think that this would be possible wouldn't you. I mean, you're essentially making a set of instructions for how to build your project from scratch. Alas, this functionality actually is not supported for some reason. Aparantly you are not allowed to test your packages before submitting to conda-forge for review.
+You would think that this would be possible wouldn't you. I mean, you're literally making a set of instructions for how to build your project from scratch. Alas, this functionality actually is not supported for some reason.
 
 There is a potential workaround involving a local conda channel, but it doesn't seem to work for me, so your mileage may vary.
 https://github.com/conda/conda/issues/1884
