@@ -50,7 +50,7 @@ requirements:
 Here is where you declare all of the conda packages that your package requires to run.
 
 Unfortunately I cannot find any example of requiring pypi dependencies. 
-I'm pretty sure there is one, but people seem reluctant to say how as it is not recommended. 
+I'm pretty sure there is one, but people seem reluctant to elaborate as it is not recommended. 
 The current answer is, make a conda package for the dependency and upload it to conda-forge 
 \**[forehead](https://www.urbandictionary.com/define.php?term=forehead)*, then you can require it in your package.
 ```yaml
