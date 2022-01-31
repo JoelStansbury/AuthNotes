@@ -128,3 +128,21 @@ https://github.com/conda/conda/issues/1884
 
 Regardless, the part that you would want to test (assuming you are new to conda build since you are reading this) is whether or not your meta.yaml instructions actually install the stuff your package needs. As far as I can tell, testing this is not supported. And judging by this comment https://github.com/conda/conda/issues/1884#issuecomment-181093847, I would not hold your breath for a fix.
 
+(1/30/2021):
+The `apveyor.yml` file included in the cookiecutter recipe has an interesting workaround.
+```yaml
+  - conda config --set always_yes yes
+  - conda update -q conda
+  - conda config --set auto_update_conda no
+  - conda update -q --all
+  - conda install -q pytest pytest-cov conda-build anaconda-client
+  - conda info
+  # this is to ensure dependencies
+  - conda build conda.recipe --no-test
+  - conda install --use-local ipypdf
+```
+In order to build the recipe conda must download all of the requirements. Once they have been downloaded on the machine, then they will be available locally. So the install won't fail to solve the environment.
+
+> Note: I have not tested this procedure, but it's worth a shot.
+
+
