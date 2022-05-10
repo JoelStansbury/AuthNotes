@@ -15,6 +15,7 @@ The process involves creating an _ssh-key pair_ which your git command line inte
    * Click `New SSH key`
    * Paste the entire contents of your (public key) `ssh_rsa.pub` into the key field (the file location was printed out in the previous step)
 
+> TODO: look into adding a `config` file to see what that is used for
 ### Still not working
 * It may be due to the way your local repo is configured.
    * `git config remote.origin.url` should show a url like this `git@github.com:USERNAME/REPOSITORY.git`
