@@ -1,0 +1,6 @@
+name: das
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
