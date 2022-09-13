@@ -1,0 +1,8 @@
+dependencies:
+  - python
+  - pip
+  - constructor
+  - nsis
+  - numpy
+  - pip:
+    - build

@@ -1,0 +1,9 @@
+{
+    "menu_name": "test",
+    "menu_items": [
+        {
+            "name": "mypackage",
+            "script": "cmd /K python -m mypackage"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+package:
+  name: mypackage
+  version: "0"
+
+source:
+  path: ../src  # .. will throw an error if using venv placed in ..
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install .
+
+requirements:
+  build:
+    - python>=3.6
+    - pip
+    - numpy
+
+  run:
+    - python>=3.6
+    - numpy
+
+# Note: conda devs really don't like pip, so if your package needs a pypi package
+# (get fucked)[https://github.com/conda/conda-build/issues/548#issuecomment-1152740785]. You'll need to test on your own.
+# Otherwise, just add any conda dependencies here. You can still do your pip installs
+# in the post_install.bat from conda-constructor
+test:
+  requires:
+    - python>=3.6
+    - numpy
+
+  imports:
+    - mypackage
+  commands:
+    - python -m mypackage
+
+about:
+  home: "poopy pants"

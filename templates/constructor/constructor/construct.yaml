@@ -1,0 +1,19 @@
+name: ExtraFiles
+version: 0
+
+# Because file://... does not support relative paths, this file
+# must be generated dynamically.
+channels:
+  - local
+  - http://repo.anaconda.com/pkgs/main/
+  # - file:///Users/stans/Documents/Projects/git/constructor-local/.venv/conda-bld
+
+specs:
+  - python
+  - pip
+  - numpy
+  - mypackage
+
+register_python_default: false
+# menu_packages:
+#   - mypackage
