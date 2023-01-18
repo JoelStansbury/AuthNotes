@@ -1,0 +1,25 @@
+name: MyPackage
+version: 0.0.1
+
+channels:
+  - local  # This is where my-package is found
+  - conda-forge
+
+specs:
+  # Needed for shortcut to be made. The [win] tag prevents this from failing on
+  # other OSs like Linux and Mac for which menuinst is not available
+  - menuinst >=1.4.17  # [win]
+
+  # Hosted in the local channel after `conda build`
+  - my-package
+  
+  # Installing locally hosted packages ignores dependencies, so they need to
+  # be here regardless of the requirements section in the recipes 
+  - nodejs
+  - python=3.9
+
+register_python_default: false
+# Anything other options you want ...
+# see https://github.com/conda/constructor/blob/main/CONSTRUCT.md
+# Be sure to switch to the correct version tag. The options seem to change
+# dramatically between minor version bumps

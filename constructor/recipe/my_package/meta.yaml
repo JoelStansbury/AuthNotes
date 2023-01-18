@@ -1,0 +1,31 @@
+# Minimal conda-package definition for use in constructor
+# see https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
+# for more info
+# Since the purpose of this file is purely to enable us to create an installer
+# this minimal description is completely sufficient. If, however, you wanted to
+# upload this to conda-forge, you'll be better off following the condabuild.md
+# notes
+
+package:
+  name: my-package
+  version: 0.0.1
+
+source:
+  # This needs to be the directory containing setup.py.
+  # But the directory also must not contain this recipe.
+  # This is why we have a my_package folder whereas you normally would just see
+  # all of that stuff directly in the root of the repo.
+  - path: ../my_package
+  # You can also specify github urls. This way the installer can be separate from
+  # the source code and you wouldn't need the nasty file structure.
+  # Other options exist (see https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#source-section)
+
+build:
+  number: 0
+
+requirements:
+  host:
+    - python=3.9
+    - pip
+# run requirements do nothing, they are ignored by constructor, so no point
+# adding them here. They'd just make the build process take longer.

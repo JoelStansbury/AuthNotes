@@ -1,0 +1,10 @@
+{
+    "menu_name": "my_package",
+    "menu_items": [
+        {
+            "name": "example",
+            "script": "python -m my_package",
+            "icon": "${MENU_DIR}/my_package_icon.ico"
+        }
+    ]
+}
